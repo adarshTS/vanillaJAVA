@@ -1,19 +1,11 @@
-userName: ${BROWSERSTACK_USERNAME}
-accessKey: ${BROWSERSTACK_ACCESS_KEY}
+userName: BROWSERSTACK_USERNAME
+accessKey: BROWSERSTACK_ACCESS_KEY
+# framework: vanilla-java
 platforms:
   - os: Windows
     osVersion: 10
     browserName: Chrome
     browserVersion: 120.0
-  - os: OS X
-    osVersion: Monterey
-    browserName: Safari
-    browserVersion: 15.6
-  - deviceName: iPhone 13
-    osVersion: 15
-    browserName: Chromium
-    deviceOrientation: portrait
-browserstackLocal: true
 buildName: bstack-java-demo
 buildIdentifier: ${BUILD_NUMBER}
 projectName: BrowserStack Vanilla JAVA Sample

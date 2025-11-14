@@ -26,15 +26,17 @@
             <version>6.2.0</version>
         </dependency>
         <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>3.0.0-M5</version>
+            <groupId>com.browserstack</groupId>
+            <artifactId>browserstack-java-sdk</artifactId>
+            <version>1.40.0</version>
         </dependency>
-        <dependency>
+         <!-- <dependency>
             <groupId>com.browserstack</groupId>
             <artifactId>browserstack-java-sdk</artifactId>
             <version>LATEST</version>
-        </dependency>
+             <scope>system</scope>
+             <systemPath>/Users/adarsh/Downloads/browserstack-java-sdk-1.42.0.jar</systemPath>
+        </dependency> -->
     </dependencies>
 
     <build>
@@ -43,24 +45,30 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
+            </plugin>
+             <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.5.0</version>
                 <configuration>
-                    <argLine>
-                        -javaagent:/Users/adarsh/.m2/repository/com/browserstack/browserstack-java-sdk/1.40.0/browserstack-java-sdk-1.40.0.jar
-                    </argLine>
-                    <!-- Run all test classes in src/test directory (Maven default behavior) -->
-                    <!--  Includes needed to run specific test.java for eg:
-                    <includes>
-                        <include>**/bstackDemoTest.java</include>
-                    </includes>
-                    -->
+                    <executable>java</executable>
+                    <classpathScope>test</classpathScope>
+                    <arguments>
+                        <argument>-javaagent:${settings.localRepository}/com/browserstack/browserstack-java-sdk/1.40.0/browserstack-java-sdk-1.40.0.jar</argument>
+                        <argument>-classpath</argument>
+                        <classpath/>
+                        <argument>bstackDemoTest</argument>
+                    </arguments>
                 </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
-            </plugin>
+            </plugin> 
         </plugins>
     </build>
 
 </project>
+
+
