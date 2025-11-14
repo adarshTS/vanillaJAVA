@@ -1,6 +1,6 @@
 userName: BROWSERSTACK_USERNAME
 accessKey: BROWSERSTACK_ACCESS_KEY
-# framework: vanilla-java
+framework: vanilla-java
 platforms:
   - os: Windows
     osVersion: 10

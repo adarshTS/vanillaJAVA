@@ -25,18 +25,18 @@
             <artifactId>webdrivermanager</artifactId>
             <version>6.2.0</version>
         </dependency>
-        <dependency>
+        <!-- <dependency>
             <groupId>com.browserstack</groupId>
             <artifactId>browserstack-java-sdk</artifactId>
             <version>1.40.0</version>
-        </dependency>
-         <!-- <dependency>
+        </dependency> -->
+         <dependency>
             <groupId>com.browserstack</groupId>
             <artifactId>browserstack-java-sdk</artifactId>
             <version>LATEST</version>
              <scope>system</scope>
              <systemPath>/Users/adarsh/Downloads/browserstack-java-sdk-1.42.0.jar</systemPath>
-        </dependency> -->
+        </dependency>
     </dependencies>
 
     <build>

@@ -345,3 +345,287 @@ com.browserstack.testOps.RequestException: Non 200 response
 12:50:51.694 [Thread-0] INFO  c.b.config.BrowserStackConfig - INFO
 12:50:51.743 [Thread-0] INFO  c.browserstack.BrowserStackJavaAgent - SDK run ended for id: 043d0da7-1716-4195-8ced-f027380383e8, testhub id: kqegryky5jzqkaasrfgzwyrts4sdkfdwsgfedota
 12:50:51.743 [Thread-0] INFO  c.b.config.BrowserStackConfig - INFO
+12:58:23.346 [main] DEBUG c.browserstack.BrowserStackJavaAgent - Extracted CLI argument from system : null
+12:58:23.394 [main] INFO  c.browserstack.BrowserStackJavaAgent - Selenium version detected - 4.35.0
+12:58:23.396 [main] INFO  c.browserstack.BrowserStackJavaAgent - Appium version detected - 
+12:58:23.592 [main] DEBUG c.b.config.BrowserStackConfig - Cli Config passed - {}
+12:58:24.095 [main] INFO  c.browserstack.BrowserStackJavaAgent - Framework set to vanilla-java
+12:58:24.103 [main] INFO  c.browserstack.BrowserStackJavaAgent - SDK run started with id: 48a1db1b-3b78-47aa-bbac-494e98db701e
+12:58:24.103 [main] INFO  c.b.config.BrowserStackConfig - INFO
+12:58:24.132 [main] DEBUG com.browserstack.v2.SdkCliUtils - File /Users/adarsh/.browserstack already exist
+12:58:24.142 [main] DEBUG com.browserstack.v2.SdkCliUtils - Current CLI Path Found: /Users/adarsh/.browserstack/cli/binary-macos-x64
+12:58:30.133 [main] DEBUG com.browserstack.v2.SdkCliUtils - Need to update binary, current binary version: 0
+12:58:30.137 [main] DEBUG com.browserstack.v2.SdkCliUtils - Downloading SDK binary from: https://sdk-assets.browserstack.com/binary-macos-x64-1.12.7.zip
+12:58:30.665 [main] ERROR com.browserstack.v2.SdkCliUtils - downloadLatestBinary: Failed to download binary, Exception: java.io.FileNotFoundException: /Users/adarsh/.browserstack/cli/downloaded_file.zip (No space left on device)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:123)
+	at com.browserstack.v2.SdkCliUtils.downloadLatestBinary(SdkCliUtils.java:148)
+	at com.browserstack.v2.SdkCliUtils.checkAndUpdateCli(SdkCliUtils.java:117)
+	at com.browserstack.v2.SdkCliUtils.setupCliPath(SdkCliUtils.java:45)
+	at com.browserstack.v2.SdkCLI.<clinit>(SdkCLI.java:44)
+	at com.browserstack.BrowserStackJavaAgent.startBrowserStackAgent_aroundBody0(BrowserStackJavaAgent.java:187)
+	at com.browserstack.BrowserStackJavaAgent.startBrowserStackAgent_aroundBody1$advice(BrowserStackJavaAgent.java:41)
+	at com.browserstack.BrowserStackJavaAgent.startBrowserStackAgent(BrowserStackJavaAgent.java:1)
+	at com.browserstack.BrowserStackJavaAgent.premain(BrowserStackJavaAgent.java:89)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at java.instrument/sun.instrument.InstrumentationImpl.loadClassAndStartAgent(InstrumentationImpl.java:491)
+	at java.instrument/sun.instrument.InstrumentationImpl.loadClassAndCallPremain(InstrumentationImpl.java:503)
+
+12:58:30.666 [main] DEBUG com.browserstack.v2.SdkCliUtils - Resolved binary path: /Users/adarsh/.browserstack/cli
+12:58:30.690 [main] INFO  com.browserstack.v2.SdkCLI - Disabling Cli for framework=vanilla-java
+12:58:34.724 [main] INFO  c.browserstack.BrowserStackJavaAgent - Project and debug logs are captured by default. To disable, set disableAutoCaptureLogs: true in config.
+12:58:43.090 [main] INFO  com.browserstack.testOps.Listener - Testhub started with id: bmoj4bnhoj2efoshoxyrjg3ojig1udlf7daao2zg
+12:58:43.100 [main] INFO  c.b.config.BrowserStackConfig - INFO
+12:58:43.780 [main] ERROR c.browserstack.BrowserStackJavaAgent - Something went wrong - java.lang.NullPointerException: Cannot read the array length because "browserStackDataFiles" is null
+	at com.browserstack.utils.UtilityMethods.createReporterMapFiles(UtilityMethods.java:1162)
+	at com.browserstack.utils.UtilityMethods.mergeReporterFiles(UtilityMethods.java:1066)
+	at com.browserstack.BrowserStackJavaAgent.startParallelTests(BrowserStackJavaAgent.java:356)
+	at com.browserstack.BrowserStackJavaAgent.startBrowserStackAgent_aroundBody0(BrowserStackJavaAgent.java:247)
+	at com.browserstack.BrowserStackJavaAgent.startBrowserStackAgent_aroundBody1$advice(BrowserStackJavaAgent.java:41)
+	at com.browserstack.BrowserStackJavaAgent.startBrowserStackAgent(BrowserStackJavaAgent.java:1)
+	at com.browserstack.BrowserStackJavaAgent.premain(BrowserStackJavaAgent.java:89)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at java.instrument/sun.instrument.InstrumentationImpl.loadClassAndStartAgent(InstrumentationImpl.java:491)
+	at java.instrument/sun.instrument.InstrumentationImpl.loadClassAndCallPremain(InstrumentationImpl.java:503)
+
+13:02:35.003 [SIGINT handler] INFO  c.b.utils.ExitSignalHandler - Shutdown triggered by: INT 2
+13:02:36.161 [Thread-0] INFO  c.browserstack.utils.LogReportingAPI - Visit https://automation.browserstack.com/builds/bmoj4bnhoj2efoshoxyrjg3ojig1udlf7daao2zg to view build report, insights, and many more debugging information all at one place!
+
+13:02:36.161 [Thread-0] INFO  c.b.config.BrowserStackConfig - INFO
+13:02:36.470 [Thread-0] INFO  com.browserstack.v2.SdkCLI - stop: cli is not running.
+13:02:39.856 [Thread-0] INFO  c.browserstack.BrowserStackJavaAgent - SDK run ended for id: 48a1db1b-3b78-47aa-bbac-494e98db701e, testhub id: bmoj4bnhoj2efoshoxyrjg3ojig1udlf7daao2zg
+13:02:39.856 [Thread-0] INFO  c.b.config.BrowserStackConfig - INFO
+13:03:05.798 [main] DEBUG c.browserstack.BrowserStackJavaAgent - Extracted CLI argument from system : null
+13:03:05.851 [main] INFO  c.browserstack.BrowserStackJavaAgent - Selenium version detected - 4.35.0
+13:03:05.853 [main] INFO  c.browserstack.BrowserStackJavaAgent - Appium version detected - 
+13:03:06.143 [main] DEBUG c.b.config.BrowserStackConfig - Cli Config passed - {}
+13:03:06.724 [main] INFO  c.browserstack.BrowserStackJavaAgent - Framework set to vanilla-java
+13:03:06.734 [main] INFO  c.browserstack.BrowserStackJavaAgent - SDK run started with id: 9113e772-a40f-4f42-b4f0-4d447a2892cf
+13:03:06.735 [main] INFO  c.b.config.BrowserStackConfig - INFO
+13:03:06.770 [main] DEBUG com.browserstack.v2.SdkCliUtils - File /Users/adarsh/.browserstack already exist
+13:03:06.783 [main] DEBUG com.browserstack.v2.SdkCliUtils - Current CLI Path Found: /Users/adarsh/.browserstack/cli/binary-macos-x64
+13:03:09.449 [main] DEBUG com.browserstack.v2.SdkCliUtils - Resolved binary path: /Users/adarsh/.browserstack/cli/binary-macos-x64
+13:03:09.470 [main] INFO  com.browserstack.v2.SdkCLI - Disabling Cli for framework=vanilla-java
+13:03:12.934 [main] INFO  c.browserstack.BrowserStackJavaAgent - Project and debug logs are captured by default. To disable, set disableAutoCaptureLogs: true in config.
+13:03:18.051 [main] INFO  com.browserstack.testOps.Listener - Testhub started with id: oggnhzjl5ssx7vo2kiuxgw5wkq5qazwbngva0eub
+13:03:18.052 [main] INFO  c.b.config.BrowserStackConfig - INFO
+13:03:19.251 [main] DEBUG c.browserstack.BrowserStackJavaAgent - Extracted CLI argument from system : null
+13:03:19.599 [main] DEBUG c.b.config.BrowserStackConfig - Cli Config passed - {}
+13:03:19.901 [main] INFO  c.browserstack.BrowserStackJavaAgent - SDK run started with id: eabb519d-f4e2-4496-a1a1-e2b669da9189
+13:03:19.901 [main] INFO  c.b.config.BrowserStackConfig - INFO
+13:03:19.946 [main] DEBUG com.browserstack.v2.SdkCliUtils - File /Users/adarsh/.browserstack already exist
+13:03:19.952 [main] DEBUG com.browserstack.v2.SdkCliUtils - Current CLI Path Found: /Users/adarsh/.browserstack/cli/binary-macos-x64
+13:03:21.617 [main] DEBUG com.browserstack.v2.SdkCliUtils - Resolved binary path: /Users/adarsh/.browserstack/cli/binary-macos-x64
+13:03:21.640 [main] INFO  com.browserstack.v2.SdkCLI - Disabling Cli for framework=vanilla-java
+13:03:23.968 [main] INFO  c.browserstack.BrowserStackJavaAgent - Project and debug logs are captured by default. To disable, set disableAutoCaptureLogs: true in config.
+13:03:36.582 [main] INFO  c.b.vanillajava.VanillaJavaTest - VanillaJavaTest: Found method
+13:03:36.583 [main] INFO  c.b.vanillajava.VanillaJavaTest - VanillaJavaTest: Extracted method body from source file:
+13:03:36.583 [main] INFO  c.b.vanillajava.VanillaJavaTest - Method Body: public static void main(String[] args) {
+       VanillaJavaTest vanillaTest = new VanillaJavaTest()
+               .setTestName("bstackDemoTest")                           // MANDATORY
+               .setScopes(Arrays.asList("bstackDemoTest"))  // MANDATORY
+               .setFilePath("bstackDemoTest.java")           // MANDATORY
+               .setTags(Arrays.asList("smoke", "critical"));           // optional
+
+        WebDriver driver = null;
+
+        try {
+
+            System.out.println("Setting up ChromeDriver");
+            WebDriverManager.chromedriver().setup();
+            driver = new ChromeDriver();
+
+           vanillaTest.start();
+
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+            driver.manage().window().maximize();
+
+
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+
+            System.out.println("Opening https://bstackdemo.com/");
+            driver.get("https://bstackdemo.com/");
+
+
+            System.out.println("Waiting for page to load");
+            wait.until(ExpectedConditions.titleContains("StackDemo"));
+
+
+            System.out.println("Locating Sign In element with ID 'signin'");
+            WebElement signInElement = wait.until(
+                    ExpectedConditions.elementToBeClickable(By.id("signin"))
+            );
+
+            System.out.println("Verifying Sign In element properties");
+            System.out.println("Element text: " + signInElement.getText());
+            System.out.println("Element is displayed: " + signInElement.isDisplayed());
+            System.out.println("Element is enabled: " + signInElement.isEnabled());
+
+            System.out.println("Clicking on Sign In element");
+            signInElement.click();
+
+            System.out.println("Waiting to observe result");
+            Thread.sleep(3000);
+           vanillaTest.finishPassed();
+
+
+
+        } catch (Exception e) {
+            System.err.println("Test failed with error: " + e.getMessage());
+            e.printStackTrace();
+        } finally {
+
+            if (driver != null) {
+                System.out.println("Closing browser");
+                driver.quit();
+               VanillaJavaTest.shutdown();
+
+            }
+        }
+    }
+13:03:36.630 [main] INFO  c.b.vanillajava.VanillaJavaTest - VanillaJavaTest: TestRunStarted event data: {file_name=src/test/java/bstackDemoTest.java, type=TestRunStarted, body={code=public static void main(String[] args) {
+       VanillaJavaTest vanillaTest = new VanillaJavaTest()
+               .setTestName("bstackDemoTest")                           // MANDATORY
+               .setScopes(Arrays.asList("bstackDemoTest"))  // MANDATORY
+               .setFilePath("bstackDemoTest.java")           // MANDATORY
+               .setTags(Arrays.asList("smoke", "critical"));           // optional
+
+        WebDriver driver = null;
+
+        try {
+
+            System.out.println("Setting up ChromeDriver");
+            WebDriverManager.chromedriver().setup();
+            driver = new ChromeDriver();
+
+           vanillaTest.start();
+
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+            driver.manage().window().maximize();
+
+
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+
+            System.out.println("Opening https://bstackdemo.com/");
+            driver.get("https://bstackdemo.com/");
+
+
+            System.out.println("Waiting for page to load");
+            wait.until(ExpectedConditions.titleContains("StackDemo"));
+
+
+            System.out.println("Locating Sign In element with ID 'signin'");
+            WebElement signInElement = wait.until(
+                    ExpectedConditions.elementToBeClickable(By.id("signin"))
+            );
+
+            System.out.println("Verifying Sign In element properties");
+            System.out.println("Element text: " + signInElement.getText());
+            System.out.println("Element is displayed: " + signInElement.isDisplayed());
+            System.out.println("Element is enabled: " + signInElement.isEnabled());
+
+            System.out.println("Clicking on Sign In element");
+            signInElement.click();
+
+            System.out.println("Waiting to observe result");
+            Thread.sleep(3000);
+           vanillaTest.finishPassed();
+
+
+
+        } catch (Exception e) {
+            System.err.println("Test failed with error: " + e.getMessage());
+            e.printStackTrace();
+        } finally {
+
+            if (driver != null) {
+                System.out.println("Closing browser");
+                driver.quit();
+               VanillaJavaTest.shutdown();
+
+            }
+        }
+    }, lang=java}, uuid=eaeb81c4-b4b4-448d-82c0-91dd2bd4ceb5, tags=[smoke, critical], product_map={"accessibility":false}, result=pending, framework=vanilla-java, meta={"agent_version":"vanilla-java-javaagent\/1.42.0","manual_integration":true,"browserstack_session_id":"858dfffb14fd8a33bc652335f9676d5943464538","browser":"chrome","cbt_session_linked":true,"browser_version":"120.0.6099.63","test_type":"functional","platform":"windows","test_framework":"vanilla-java"}, name=bstackDemoTest, vc_filepath=src/test/java/bstackDemoTest.java, started_at=2025-11-14T07:33:36.583545Z, location=src/test/java/bstackDemoTest.java, scopes=[bstackDemoTest], integrations={"browserstack":{"product":"automate","capabilities":{"networkConnectionEnabled":false,"chrome":{"chromedriverVersion":"120.0.6099.62 (93ab19d804d479b507c4694305631dfb65f8e930-refs\/branch-heads\/6099_56@{#3})","userDataDir":"C:\\Windows\\proxy\\scoped_dir14036_1606186279"},"optimalHubUrl":"hub-aps.browserstack.com","timeouts":{"implicit":"0","pageLoad":"300000","script":"30000"},"pageLoadStrategy":"normal","unhandledPromptBehavior":"dismiss and notify","strictFileInteractability":false,"proxy":{"proxyAutoconfigUrl":null,"autodetect":false,"socksUsername":null,"socksPassword":null,"httpProxy":null,"socksVersion":null,"proxyType":"UNSPECIFIED","noProxy":null,"ftpProxy":null,"socksProxy":null,"sslProxy":null},"webauthn:extension:minPinLength":true,"goog:chromeOptions":{"debuggerAddress":"localhost:9222"},"webdriver.remote.sessionid":"858dfffb14fd8a33bc652335f9676d5943464538","webauthn:extension:credBlob":true,"webauthn:extension:prf":true,"acceptInsecureCerts":true,"browserVersion":"120.0.6099.63","fedcm:accounts":true,"browserName":"chrome","platformName":"windows","setWindowRect":true,"webauthn:extension:largeBlob":true,"webauthn:virtualAuthenticators":true},"platform_version":10,"browser":"chrome","session_id":"858dfffb14fd8a33bc652335f9676d5943464538","browser_version":"120.0.6099.63","platform":"windows"}}}
+13:03:36.662 [main] INFO  c.b.vanillajava.VanillaJavaTest - VanillaJavaTest: TestRunStarted sent successfully for 'bstackDemoTest' with UUID: eaeb81c4-b4b4-448d-82c0-91dd2bd4ceb5
+13:03:48.436 [main] INFO  c.b.vanillajava.VanillaJavaTest - VanillaJavaTest: TestRunFinished event data: {finished_at=2025-11-14T07:33:48.410044Z, file_name=src/test/java/bstackDemoTest.java, type=TestRunStarted, body={code=public static void main(String[] args) {
+       VanillaJavaTest vanillaTest = new VanillaJavaTest()
+               .setTestName("bstackDemoTest")                           // MANDATORY
+               .setScopes(Arrays.asList("bstackDemoTest"))  // MANDATORY
+               .setFilePath("bstackDemoTest.java")           // MANDATORY
+               .setTags(Arrays.asList("smoke", "critical"));           // optional
+
+        WebDriver driver = null;
+
+        try {
+
+            System.out.println("Setting up ChromeDriver");
+            WebDriverManager.chromedriver().setup();
+            driver = new ChromeDriver();
+
+           vanillaTest.start();
+
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+            driver.manage().window().maximize();
+
+
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+
+            System.out.println("Opening https://bstackdemo.com/");
+            driver.get("https://bstackdemo.com/");
+
+
+            System.out.println("Waiting for page to load");
+            wait.until(ExpectedConditions.titleContains("StackDemo"));
+
+
+            System.out.println("Locating Sign In element with ID 'signin'");
+            WebElement signInElement = wait.until(
+                    ExpectedConditions.elementToBeClickable(By.id("signin"))
+            );
+
+            System.out.println("Verifying Sign In element properties");
+            System.out.println("Element text: " + signInElement.getText());
+            System.out.println("Element is displayed: " + signInElement.isDisplayed());
+            System.out.println("Element is enabled: " + signInElement.isEnabled());
+
+            System.out.println("Clicking on Sign In element");
+            signInElement.click();
+
+            System.out.println("Waiting to observe result");
+            Thread.sleep(3000);
+           vanillaTest.finishPassed();
+
+
+
+        } catch (Exception e) {
+            System.err.println("Test failed with error: " + e.getMessage());
+            e.printStackTrace();
+        } finally {
+
+            if (driver != null) {
+                System.out.println("Closing browser");
+                driver.quit();
+               VanillaJavaTest.shutdown();
+
+            }
+        }
+    }, lang=java}, uuid=eaeb81c4-b4b4-448d-82c0-91dd2bd4ceb5, tags=[smoke, critical], product_map={"accessibility":false}, result=passed, framework=vanilla-java, meta={"agent_version":"vanilla-java-javaagent\/1.42.0","manual_integration":true,"browserstack_session_id":"858dfffb14fd8a33bc652335f9676d5943464538","browser":"chrome","cbt_session_linked":true,"browser_version":"120.0.6099.63","test_type":"functional","platform":"windows","test_framework":"vanilla-java"}, name=bstackDemoTest, vc_filepath=src/test/java/bstackDemoTest.java, started_at=2025-11-14T07:33:36.583545Z, location=src/test/java/bstackDemoTest.java, scopes=[bstackDemoTest], duration_in_ms=11826, integrations={"browserstack":{"product":"automate","capabilities":{"networkConnectionEnabled":false,"chrome":{"chromedriverVersion":"120.0.6099.62 (93ab19d804d479b507c4694305631dfb65f8e930-refs\/branch-heads\/6099_56@{#3})","userDataDir":"C:\\Windows\\proxy\\scoped_dir14036_1606186279"},"optimalHubUrl":"hub-aps.browserstack.com","timeouts":{"implicit":"0","pageLoad":"300000","script":"30000"},"pageLoadStrategy":"normal","unhandledPromptBehavior":"dismiss and notify","strictFileInteractability":false,"proxy":{"proxyAutoconfigUrl":null,"autodetect":false,"socksUsername":null,"socksPassword":null,"httpProxy":null,"socksVersion":null,"proxyType":"UNSPECIFIED","noProxy":null,"ftpProxy":null,"socksProxy":null,"sslProxy":null},"webauthn:extension:minPinLength":true,"goog:chromeOptions":{"debuggerAddress":"localhost:9222"},"webdriver.remote.sessionid":"858dfffb14fd8a33bc652335f9676d5943464538","webauthn:extension:credBlob":true,"webauthn:extension:prf":true,"acceptInsecureCerts":true,"browserVersion":"120.0.6099.63","fedcm:accounts":true,"browserName":"chrome","platformName":"windows","setWindowRect":true,"webauthn:extension:largeBlob":true,"webauthn:virtualAuthenticators":true},"platform_version":10,"browser":"chrome","session_id":"858dfffb14fd8a33bc652335f9676d5943464538","browser_version":"120.0.6099.63","platform":"windows"}}, hooks=[]}
+13:03:48.468 [main] INFO  c.b.vanillajava.VanillaJavaTest - VanillaJavaTest: TestRunFinished sent successfully for 'bstackDemoTest', result: passed, duration: 11826ms
+13:03:50.060 [main] INFO  c.b.vanillajava.VanillaJavaTest - VanillaJavaTest: Triggering manual shutdown for clean process termination
+13:03:50.061 [main] INFO  c.b.vanillajava.VanillaJavaTest - VanillaJavaTest: Initiating clean JVM shutdown
+13:03:50.062 [Thread-0] INFO  c.browserstack.utils.RequestBatcher - TEARDOWN REQUEST BATCHER
+13:03:51.046 [Thread-0] INFO  c.browserstack.utils.LogReportingAPI - Visit https://automation.browserstack.com/builds/oggnhzjl5ssx7vo2kiuxgw5wkq5qazwbngva0eub to view build report, insights, and many more debugging information all at one place!
+
+13:03:51.046 [Thread-0] INFO  c.b.config.BrowserStackConfig - INFO
+13:03:51.063 [Thread-0] INFO  com.browserstack.v2.SdkCLI - stop: cli is not running.
+13:03:53.635 [Thread-0] INFO  c.browserstack.utils.UtilityMethods - View build on BrowserStack dashboard: https://automate.browserstack.com/dashboard/v2/builds/df5d61a2b24b18c6e551a2bdc2f7a418b3a23c8d
+13:03:53.635 [Thread-0] INFO  c.b.config.BrowserStackConfig - INFO
+13:03:53.666 [Thread-0] INFO  c.browserstack.BrowserStackJavaAgent - SDK run ended for id: 9113e772-a40f-4f42-b4f0-4d447a2892cf, testhub id: oggnhzjl5ssx7vo2kiuxgw5wkq5qazwbngva0eub
+13:03:53.666 [Thread-0] INFO  c.b.config.BrowserStackConfig - INFO

@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-// import com.browserstack.vanillajava.VanillaJavaTest;
+import com.browserstack.vanillajava.VanillaJavaTest;
 
 
 import java.time.Duration;
@@ -14,11 +14,11 @@ import java.util.Arrays;
 public class bstackDemoTest {
 
     public static void main(String[] args) {
-    //    VanillaJavaTest vanillaTest = new VanillaJavaTest()
-    //            .setTestName("bstackDemoTest")                           // MANDATORY
-    //            .setScopes(Arrays.asList("bstackDemoTest"))  // MANDATORY
-    //            .setFilePath("bstackDemoTest.java")           // MANDATORY
-    //            .setTags(Arrays.asList("smoke", "critical"));           // optional
+       VanillaJavaTest vanillaTest = new VanillaJavaTest()
+               .setTestName("bstackDemoTest")                           // MANDATORY
+               .setScopes(Arrays.asList("bstackDemoTest"))  // MANDATORY
+               .setFilePath("bstackDemoTest.java")           // MANDATORY
+               .setTags(Arrays.asList("smoke", "critical"));           // optional
 
         WebDriver driver = null;
 
@@ -28,7 +28,7 @@ public class bstackDemoTest {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
 
-        //    vanillaTest.start();
+           vanillaTest.start();
 
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
             driver.manage().window().maximize();
@@ -60,7 +60,7 @@ public class bstackDemoTest {
 
             System.out.println("Waiting to observe result");
             Thread.sleep(3000);
-        //    vanillaTest.finishPassed();
+           vanillaTest.finishPassed();
 
 
 
@@ -72,7 +72,7 @@ public class bstackDemoTest {
             if (driver != null) {
                 System.out.println("Closing browser");
                 driver.quit();
-            //    VanillaJavaTest.shutdown();
+               VanillaJavaTest.shutdown();
 
             }
         }
