@@ -5,20 +5,25 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-// import com.browserstack.vanillajava.VanillaJavaTest;
-
-
 import java.time.Duration;
 import java.util.Arrays;
+import com.browserstack.Sdk.TestClient;
 
 public class bstackDemoTest {
-
+    
     public static void main(String[] args) {
-    //    VanillaJavaTest vanillaTest = new VanillaJavaTest()
-    //            .setTestName("bstackDemoTest")                           // MANDATORY
-    //            .setScopes(Arrays.asList("bstackDemoTest"))  // MANDATORY
-    //            .setFilePath("bstackDemoTest.java")           // MANDATORY
-    //            .setTags(Arrays.asList("smoke", "critical"));           // optional
+
+    /* 
+        - TestClient objects helps to manually feed “what test is this?” metadata into the BrowserStack SDK so it can:
+            * create a proper test entity in Test Observability (TRA)
+            * correlate that test with the right file, package, and session
+            * mark session name and status in Automate 
+    */
+
+         TestClient testClient = new TestClient()
+                    .setTestName("bstackDemoTest")                           // MANDATORY, logical test case name.
+                    .setTestHierarchy(Arrays.asList("test", "java", "bstackDemoTest")) // MANDATORY, This is the "scopes" / hierarchical locator of the test.
+                    .setFilePath("src/test/java/bstackDemoTest.java");       // MANDATORY, shows the file path of the test case TRA. 
 
         WebDriver driver = null;
 
@@ -28,7 +33,7 @@ public class bstackDemoTest {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
 
-        //    vanillaTest.start();
+            testClient.start();
 
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
             driver.manage().window().maximize();
@@ -60,20 +65,20 @@ public class bstackDemoTest {
 
             System.out.println("Waiting to observe result");
             Thread.sleep(3000);
-        //    vanillaTest.finishPassed();
+            testClient.Pass();
 
 
 
         } catch (Exception e) {
             System.err.println("Test failed with error: " + e.getMessage());
             e.printStackTrace();
+            testClient.Fail(e);
+
         } finally {
 
             if (driver != null) {
                 System.out.println("Closing browser");
                 driver.quit();
-            //    VanillaJavaTest.shutdown();
-
             }
         }
     }
